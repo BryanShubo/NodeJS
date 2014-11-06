@@ -3,7 +3,7 @@
 #1. From cmd:
 
 '''javascript
-<b>**node --version**</b>
+**node --version**
 '''
 
 // return version
