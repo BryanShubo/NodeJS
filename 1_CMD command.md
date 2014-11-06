@@ -2,7 +2,7 @@
 
 #1. From cmd:
 
->**node --version** 
+<b>**node --version**</b>
 
 // return version
 
