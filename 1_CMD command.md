@@ -10,7 +10,7 @@
 
 >**.help** 
 
-// get help
+// show repl options
 
 >**.break**
 
@@ -19,9 +19,19 @@
 >**.clear**
 
 // alias for .break
-.exit // exit the repl
-.help // show repl options
-.load // load js from a file into the repl session
-.save // save all eveluated commands in this repl session to a file
 
-control + D  // gets out of node
+>**.exit**
+
+// exit the repl
+
+>**.load**
+
+// load js from a file into the repl session
+
+>**.save**
+
+// save all eveluated commands in this repl session to a file
+
+>**control + D**
+
+// gets out of node
