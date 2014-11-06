@@ -8,7 +8,7 @@
 
 // Go to node
 
-.**.help** 
+>**.help** 
 
 // get help
 
