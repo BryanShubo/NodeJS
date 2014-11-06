@@ -1,7 +1,9 @@
 
 
 1. From cmd:
-node --version // return version
+<node --version >
+
+// return version
 node  // Go to node
 .help //
 .break // this gets you out
