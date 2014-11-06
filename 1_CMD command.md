@@ -1,11 +1,8 @@
 
 
-#1. From cmd:
+##1. CMD command:
 
-'''javascript
 **node --version**
-'''
-
 // return version
 
 node  // Go to node
