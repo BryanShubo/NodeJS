@@ -15,7 +15,10 @@
 >**.break**
 
 // this gets you out
-.clear // alias for .break
+
+>**.clear**
+
+// alias for .break
 .exit // exit the repl
 .help // show repl options
 .load // load js from a file into the repl session
