@@ -2,7 +2,9 @@
 
 #1. From cmd:
 
-><b>**node --version**</b>
+''' javascript
+<b>**node --version**</b>
+'''
 
 // return version
 
