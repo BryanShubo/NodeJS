@@ -1,13 +1,20 @@
-
-
 ##1. CMD command:
 
-**node --version**
+>**node --version**
+
 // return version
 
-node  // Go to node
-.help //
-.break // this gets you out
+>**node**  
+
+// Go to node
+
+.**.help** 
+
+// get help
+
+>**.break**
+
+// this gets you out
 .clear // alias for .break
 .exit // exit the repl
 .help // show repl options
