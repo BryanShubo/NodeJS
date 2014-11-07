@@ -208,7 +208,7 @@ for (key in user) {
 
 7. Inheritance and prototypes
 
-'''
+```
 
 function Shape(){
     this.X=0;
@@ -222,7 +222,7 @@ function Shape(){
 var s = new Shape();
 s.move(10,10);
 console.log(s.distance_from_origin());
-'''
+```
 
 
 
