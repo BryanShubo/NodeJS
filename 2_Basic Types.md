@@ -288,5 +288,28 @@ console.log(sq instanceof Rectangle);
 ```
 
 
+8. Use and handle errors
+
+```
+function uhoh(){ throw new Error("Badd!!!!!");}
+```
+
+```
+try { uhoh(); } catch(e){ console.log("I got an error " + e.message); }
+```
+
+9. Work with some important Node globals
+
+```
+function print_a_global(name){ console.log(global[name]); }
+
+global.fish='gold';
+
+global.pet ="cat";
+
+print_a_global("fish");
+
+print_a_global("pet");
+```
 
 
