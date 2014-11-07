@@ -209,6 +209,7 @@ for (key in user) {
 7. Inheritance and prototypes
 
 '''
+
 function Shape(){
     this.X=0;
 	this.Y=0;
