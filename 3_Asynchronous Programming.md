@@ -87,13 +87,83 @@ fs.open('test.txt','r' function(err,handle){
 	    console.log("Oh, No ! fail on open: " + err.code + " " + err.message);
 	}
 });
-
-
-
-###3.3 Solving a new problem that arises in Node.js-losing your "this" pointer
 ```
 
 
+###3.3 Solving a new problem that arises in Node.js-losing your "this" pointer
+
+```
+var fs = require('fs');
+
+function FileObject(){
+    this.filename = null;
+	
+	this.exists = function(callback) {
+	console.log("attempting to verify: " + this.filename);
+	fs.open(this.filename,'r', function(err,handle){
+	    if(err) {
+		    console.log(this.filename + " does NOT exist");
+			callback(false);
+		} else {
+		    console.log(this.filename + ' does INDEED exist');
+			callback(true);
+			fs.close(handle);
+		}
+	});
+	};
+}
+
+var fo = new FileObject();
+fo.filename = 'a;dja;d';
+
+fo.exists(function(does_it_exist){
+    console.log("results from exist: " + does_it_exist);
+});
+```
+
+// return: attempting to verify: a:dja:d
+undefined does NOT exist
+results from exist:false
+
+in fs.open function, "this" reference does not point to object FileObject any more, so this.filename is fs.open function is null.
+
+Solution:
+
+```
+var fs = require('fs');
+
+function FileObject(){
+    this.filename = null;
+	
+	this.exists = function(callback) {
+	var self = this;
+	console.log("attempting to verify: " + this.filename);
+	fs.open(self.filename,'r', function(err,handle){
+	    if(err) {
+		    console.log(self.filename + " does NOT exist");
+			callback(false);
+		} else {
+		    console.log(self.filename + ' does INDEED exist');
+			callback(true);
+			fs.close(handle);
+		}
+	});
+	};
+}
+
+var fo = new FileObject();
+fo.filename = 'a;dja;d';
+
+fo.exists(function(does_it_exist){
+    console.log("results from exist: " + does_it_exist);
+});
+```
+
+
+###3.4 Yield control and improve responsiveness
+
+####1) process.nexttick(callback);
+####2) setImmediate(callback);
 
 
 
