@@ -162,6 +162,8 @@ fo.exists(function(does_it_exist){
 
 ###3.4 Yield control and improve responsiveness
 
+Yield control to tell node to execute the next function.
+
 ####1) process.nexttick(callback);
 ####2) setImmediate(callback);
 
