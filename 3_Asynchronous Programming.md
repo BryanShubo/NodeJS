@@ -168,6 +168,8 @@ Yield control to tell node to execute the next function.
 ####2) setImmediate(callback);
 
 
+###3.5 Synchronous Programming in Node.js
+
 
 
 
